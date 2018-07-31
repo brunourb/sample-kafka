@@ -1,0 +1,13 @@
+spring:
+  kafka:
+    consumer:
+      group-id: sample-consumer
+      auto-offset-reset: earliest
+
+endpoints:
+  actuator:
+    sensitive: false
+
+management:
+  security:
+    enabled: false

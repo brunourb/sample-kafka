@@ -16,7 +16,7 @@ public class Producer {
 
   public void send(String message) {
     kafkaTemplate
-        .send("sample", String.valueOf(message.hashCode()), message)
+        .send("sample", message)
         .addCallback(
             new ListenableFutureCallback<SendResult>() {
               @Override

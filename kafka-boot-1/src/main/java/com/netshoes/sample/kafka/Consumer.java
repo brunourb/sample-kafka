@@ -13,5 +13,10 @@ public class Consumer {
   @KafkaListener(topics = "sample")
   public void receive(String message) {
     log.info(message);
+    try {
+      Thread.sleep(1000L);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
   }
 }
